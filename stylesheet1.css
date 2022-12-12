@@ -1,22 +1,16 @@
-/* media Queries*/
-@media (max-width: 200px) {
-}
-@media (max-width: 600px) {
-}
-@media (max-width: 1024px) {
-}
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /*to make all elements have same font family*/
 
 *{
-  font-family: 'Poppins', sans-serif;
+  font-family:monospace;
   margin:0;
   padding:0;
   box-sizing:border-box;
   scroll-behavior:smooth;
 }
+
 
 header {
   background-color:#CCA43B;
@@ -222,6 +216,8 @@ section{
   flex-wrap:wrap; /*to have card go down is smaller screen*/
 }
 
+
+
 .cardcontact .icon{
   font-size:1em;
   align-items: center;
@@ -249,6 +245,8 @@ section{
     text-align:center;
     color: #363636;
   }
+
+  
 
 /* Bio Page */
 .bio p{
@@ -399,6 +397,58 @@ a{
     padding: 0 .25rem;
     transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 
+}
+@media (max-width:1023px){
+  header{
+      padding: 12px 20px;
+  }
+
+  .navigation a{
+      padding-left: 10px;
+  }
+
+  .title{
+      font-size: 1.8em;
+  }
+
+  section{
+      padding: 80px 20px;
+  }
+
+  .main-content h2{
+      font-size: 1em;
+  }
+
+  .main-content h3{
+      font-size: 1.6em;
+  }
+
+  .content{
+      flex-direction: column;
+      align-items: center;
+  }
+
+}
+
+@media (max-width:641px){
+  body{
+      font-size: 12px;
+  }
+
+  .main-content h2{
+      font-size: 0.8em;
+  }
+
+  .main-content h3{
+      font-size: 1.4em;
+  }
+}
+
+@media (max-width:300px){
+  body{
+      font-size: 10px;
+   
+  }
 }
 
 /* hover styling for links*/
@@ -626,4 +676,24 @@ input[type=submit]:hover {
 .divbio { grid-area: 2 / 2 / 5 / 3; }
 .divbio2 { grid-area: 2 / 3 / 5 / 5; 
   font-style: oblique;
+}
+@media (max-width:641px){
+  body{
+      font-size: 12px;
+  }
+
+  .main-content h2{
+      font-size: 0.8em;
+  }
+
+  .main-content h3{
+      font-size: 1.4em;
+  }
+}
+
+@media (max-width:300px){
+  body{
+      font-size: 10px;
+   
+  }
 }
