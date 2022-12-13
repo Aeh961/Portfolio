@@ -442,10 +442,12 @@ a{
 @media (max-width:300px){
   body{
       font-size: 10px;
-   
   }
 }
 
+.video{
+  display:flex
+}
 /* hover styling for links*/
 a:hover {
     color: #E5E5E5;
@@ -611,6 +613,7 @@ input[type=submit]:hover {
   position:absolute;
   z-index: 0;
   border-radius: 10px;
+
 }
 
 .glow-on-hover:before {
@@ -663,7 +666,7 @@ input[type=submit]:hover {
 
 /* Bio divs*/
 .parent {
-  display: grid;
+
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(5, 1fr);
   grid-column-gap: 0px;
