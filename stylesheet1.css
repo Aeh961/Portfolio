@@ -674,23 +674,3 @@ input[type=submit]:hover {
 .divbio2 { grid-area: 2 / 3 / 5 / 5; 
   font-style: oblique;
 }
-@media (max-width:641px){
-  body{
-      font-size: 12px;
-  }
-
-  .main-content h2{
-      font-size: 0.8em;
-  }
-
-  .main-content h3{
-      font-size: 1.4em;
-  }
-}
-
-@media (max-width:300px){
-  body{
-      font-size: 10px;
-   
-  }
-}
