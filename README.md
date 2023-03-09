@@ -9,4 +9,4 @@ work.html is for my work exp and calls the app.js for that uses vue
 education.html calls a json file from to get the info 
 styleshee.css styles all documents
 
-using: html css javascript vue
+using: html css javascript vuejs
