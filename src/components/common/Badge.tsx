@@ -6,8 +6,6 @@ interface BadgeProps {
 
 export function Badge({ children }: BadgeProps) {
   return (
-    <span className="bg-accent-muted text-accent rounded-full px-2.5 py-1 text-xs font-medium">
-      {children}
-    </span>
+    <span className="bg-accent-muted text-accent px-2.5 py-1 text-xs font-medium">{children}</span>
   )
 }

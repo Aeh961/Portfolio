@@ -33,7 +33,7 @@ export function Nav() {
   return (
     <header className="border-border bg-paper/90 sticky top-0 z-40 border-b backdrop-blur">
       <Container className="flex h-16 items-center justify-between">
-        <a href="#top" className="text-ink text-sm font-semibold tracking-tight">
+        <a href="#top" className="font-display text-ink text-base font-semibold tracking-tight">
           {site.name}
         </a>
 

@@ -28,17 +28,21 @@ const iconByProjectId: Record<string, IconType> = {
 
 interface ProjectCardIconProps {
   projectId: string
+  title: string
 }
 
-export function ProjectCardIcon({ projectId }: ProjectCardIconProps) {
+export function ProjectCardIcon({ projectId, title }: ProjectCardIconProps) {
   const Icon = iconByProjectId[projectId] ?? FiCode
 
   return (
     <div
       aria-hidden="true"
-      className="from-accent-muted to-surface flex aspect-[16/10] items-center justify-center rounded-t-xl bg-gradient-to-br"
+      className="bg-accent-muted relative flex aspect-[16/10] items-center justify-center overflow-hidden"
     >
-      <Icon className="text-accent" size={40} strokeWidth={1.5} />
+      <span className="font-display text-accent/25 absolute -bottom-6 -left-2 text-[7rem] leading-none font-semibold select-none">
+        {title.charAt(0)}
+      </span>
+      <Icon className="text-accent relative" size={34} strokeWidth={1.5} />
     </div>
   )
 }

@@ -15,7 +15,7 @@ export function ExperienceItem({ entry }: ExperienceItemProps) {
         <p className="text-ink-muted text-sm font-medium">
           {entry.startDate} – {entry.endDate}
         </p>
-        <p className="text-ink mt-1 font-semibold">
+        <p className="font-display text-ink mt-1 text-lg font-semibold">
           {entry.organizationHref ? (
             <a
               href={entry.organizationHref}

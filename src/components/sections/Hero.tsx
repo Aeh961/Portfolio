@@ -9,20 +9,11 @@ export function Hero() {
   return (
     <section aria-labelledby="hero-heading" className="py-24 sm:py-32">
       <Container>
-        <div className="flex flex-wrap gap-2">
-          {site.roleTags.map((tag) => (
-            <span
-              key={tag}
-              className="border-border text-ink-muted rounded-full border px-3 py-1 text-xs font-medium"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
+        <p className="font-display text-accent mb-5 text-lg italic">{site.roleTags.join(' · ')}</p>
 
         <h1
           id="hero-heading"
-          className="text-display mt-6 max-w-3xl font-semibold tracking-tight text-balance"
+          className="text-display font-display max-w-3xl font-semibold tracking-tight text-balance"
         >
           {site.heroHeadline}
         </h1>
