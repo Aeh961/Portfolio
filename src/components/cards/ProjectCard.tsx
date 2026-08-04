@@ -41,7 +41,7 @@ export function ProjectCard({ project, delay = 0 }: ProjectCardProps) {
               </span>
             )}
             {project.status === 'active-development' && (
-              <span className="rounded-full border border-amber-500/40 bg-amber-500/10 px-2 py-0.5 text-[11px] font-medium text-amber-600 dark:text-amber-400">
+              <span className="rounded-full border border-amber-500/40 bg-amber-500/10 px-2 py-0.5 text-[11px] font-medium text-amber-800 dark:text-amber-400">
                 In active development
               </span>
             )}

@@ -14,7 +14,7 @@ function App() {
       <SkipLink />
       <div id="top" />
       <Nav />
-      <main id="main">
+      <main id="main" tabIndex={-1} className="focus:outline-none">
         <Hero />
         <About />
         <Experience />
