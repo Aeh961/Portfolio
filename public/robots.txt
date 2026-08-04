@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aeh961.github.io/Portfolio/sitemap.xml
