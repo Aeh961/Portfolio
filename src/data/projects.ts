@@ -1,4 +1,8 @@
 import type { Project } from '../types/content'
+import unskunkedExploreWaters from '../assets/images/projects/unskunked/explore-waters.webp'
+import daleelnaHero from '../assets/images/projects/daleelna/hero.webp'
+import jobFinderDashboard from '../assets/images/projects/job-finder/dashboard.webp'
+import neoracerRlSim from '../assets/images/projects/neoracer-rl/sim.webp'
 
 export const projects: Project[] = [
   {
@@ -17,6 +21,12 @@ export const projects: Project[] = [
     repoLabel: 'aeh961/unskunked',
     ownership: 'own',
     featured: true,
+    image: {
+      src: unskunkedExploreWaters,
+      alt: 'Unskunked iOS "Explore Waters" screen showing search filters and a nearby fishing spot map',
+      width: 480,
+      height: 1044,
+    },
   },
   {
     id: 'job-finder',
@@ -34,6 +44,12 @@ export const projects: Project[] = [
     repoLabel: 'aeh961/Job-Finder',
     ownership: 'own',
     featured: true,
+    image: {
+      src: jobFinderDashboard,
+      alt: 'JobFinder AI dashboard showing tracked employers and application pipeline status',
+      width: 960,
+      height: 844,
+    },
   },
   {
     id: 'tinymusician',
@@ -135,6 +151,12 @@ export const projects: Project[] = [
     repoUrl: 'https://github.com/Neobotics-Foundation-Inc/neoracer-rl',
     repoLabel: 'Neobotics-Foundation-Inc/neoracer-rl',
     ownership: 'own',
+    image: {
+      src: neoracerRlSim,
+      alt: 'NeoRacer simulation environment with the autonomous vehicle navigating a track',
+      width: 960,
+      height: 541,
+    },
   },
   {
     id: 'build-interpreter',
@@ -182,5 +204,11 @@ export const projects: Project[] = [
     repoLabel: 'aeh961/daleelna',
     ownership: 'own',
     featured: true,
+    image: {
+      src: daleelnaHero,
+      alt: 'Daleelna homepage showing the Arab community resource, business, and event directory',
+      width: 960,
+      height: 713,
+    },
   },
 ]
