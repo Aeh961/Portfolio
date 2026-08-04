@@ -4,6 +4,7 @@ import { SkipLink } from './components/layout/SkipLink'
 import { About } from './components/sections/About'
 import { Experience } from './components/sections/Experience'
 import { Hero } from './components/sections/Hero'
+import { Projects } from './components/sections/Projects'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Hero />
         <About />
         <Experience />
+        <Projects />
       </main>
       <Footer />
     </>
