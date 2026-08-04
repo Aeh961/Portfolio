@@ -1,3 +1,4 @@
+import { Reveal } from '../common/Reveal'
 import type { ExperienceEntry } from '../../types/content'
 
 interface ExperienceItemProps {
@@ -6,7 +7,10 @@ interface ExperienceItemProps {
 
 export function ExperienceItem({ entry }: ExperienceItemProps) {
   return (
-    <li className="border-border grid gap-1 border-l-2 py-2 pl-6 sm:grid-cols-[14rem_1fr] sm:gap-8">
+    <Reveal
+      as="li"
+      className="border-border grid gap-1 border-l-2 py-2 pl-6 sm:grid-cols-[14rem_1fr] sm:gap-8"
+    >
       <div>
         <p className="text-ink-muted text-sm font-medium">
           {entry.startDate} – {entry.endDate}
@@ -39,6 +43,6 @@ export function ExperienceItem({ entry }: ExperienceItemProps) {
           </li>
         ))}
       </ul>
-    </li>
+    </Reveal>
   )
 }

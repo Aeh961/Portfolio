@@ -9,8 +9,8 @@ export function Skills() {
       <Container>
         <SectionHeading id="skills-heading" eyebrow="Skills" title="Tools I work with" />
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-          {skills.map((category) => (
-            <SkillCategoryCard key={category.id} category={category} />
+          {skills.map((category, index) => (
+            <SkillCategoryCard key={category.id} category={category} delay={(index % 2) * 80} />
           ))}
         </div>
       </Container>

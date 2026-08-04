@@ -1,11 +1,13 @@
 import { FiExternalLink, FiGithub } from 'react-icons/fi'
 import type { Project } from '../../types/content'
 import { Badge } from '../common/Badge'
+import { Reveal } from '../common/Reveal'
 import { ProjectCardIcon } from './ProjectCardIcon'
 import { ProjectCardImage } from './ProjectCardImage'
 
 interface ProjectCardProps {
   project: Project
+  delay?: number
 }
 
 const ownershipLabel: Record<Project['ownership'], string | null> = {
@@ -14,11 +16,15 @@ const ownershipLabel: Record<Project['ownership'], string | null> = {
   contribution: 'Open-source contribution',
 }
 
-export function ProjectCard({ project }: ProjectCardProps) {
+export function ProjectCard({ project, delay = 0 }: ProjectCardProps) {
   const noteLabel = ownershipLabel[project.ownership]
 
   return (
-    <article className="bg-surface border-border shadow-card flex flex-col overflow-hidden rounded-xl border transition-shadow hover:shadow-lg">
+    <Reveal
+      as="article"
+      delay={delay}
+      className="bg-surface border-border shadow-card flex flex-col overflow-hidden rounded-xl border transition-shadow hover:shadow-lg"
+    >
       {project.image ? (
         <ProjectCardImage image={project.image} />
       ) : (
@@ -88,6 +94,6 @@ export function ProjectCard({ project }: ProjectCardProps) {
           )}
         </div>
       </div>
-    </article>
+    </Reveal>
   )
 }
