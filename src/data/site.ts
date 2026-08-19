@@ -1,4 +1,5 @@
 import type { SiteContent } from '../types/content'
+import portrait from '../assets/images/profile/portrait.webp'
 
 export const site: SiteContent = {
   name: 'Abdallah El Hamawi',
@@ -22,4 +23,8 @@ export const site: SiteContent = {
     },
     { label: 'Email', href: 'mailto:abdallahelhamawi@gmail.com', icon: 'email' },
   ],
+  portrait: {
+    src: portrait,
+    alt: 'Portrait of Abdallah El Hamawi',
+  },
 }

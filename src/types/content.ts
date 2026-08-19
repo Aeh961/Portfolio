@@ -12,6 +12,10 @@ export interface SiteContent {
   aboutParagraphs: string[]
   email: string
   social: SocialLink[]
+  portrait: {
+    src: string
+    alt: string
+  }
 }
 
 export interface ExperienceEntry {

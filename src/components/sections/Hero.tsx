@@ -9,65 +9,79 @@ export function Hero() {
   return (
     <section aria-labelledby="hero-heading" className="py-24 sm:py-32">
       <Container>
-        <div className="flex flex-wrap gap-2">
-          {site.roleTags.map((tag) => (
-            <span
-              key={tag}
-              className="border-border text-ink-muted rounded-full border px-3 py-1 text-xs font-medium"
+        <div className="flex flex-col-reverse items-center gap-12 lg:flex-row lg:items-center lg:justify-between lg:gap-16">
+          <div className="max-w-2xl">
+            <div className="flex flex-wrap gap-2">
+              {site.roleTags.map((tag) => (
+                <span
+                  key={tag}
+                  className="border-border text-ink-muted rounded-full border px-3 py-1 text-xs font-medium"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+
+            <h1
+              id="hero-heading"
+              className="text-display mt-6 font-semibold tracking-tight text-balance"
             >
-              {tag}
-            </span>
-          ))}
-        </div>
+              {site.heroHeadline}
+            </h1>
 
-        <h1
-          id="hero-heading"
-          className="text-display mt-6 max-w-3xl font-semibold tracking-tight text-balance"
-        >
-          {site.heroHeadline}
-        </h1>
+            <p className="text-ink-muted mt-6 text-lg text-balance">{site.heroSubheadline}</p>
 
-        <p className="text-ink-muted mt-6 max-w-2xl text-lg text-balance">{site.heroSubheadline}</p>
+            <div className="mt-10 flex flex-wrap items-center gap-4">
+              <a
+                href="#projects"
+                className="bg-accent text-accent-ink inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-opacity hover:opacity-90"
+              >
+                View Projects
+                <FiArrowRight aria-hidden="true" size={16} />
+              </a>
+              <a
+                href="#contact"
+                className="border-border text-ink hover:border-accent inline-flex items-center gap-2 rounded-full border px-5 py-2.5 text-sm font-semibold transition-colors"
+              >
+                Get in Touch
+              </a>
+            </div>
 
-        <div className="mt-10 flex flex-wrap items-center gap-4">
-          <a
-            href="#projects"
-            className="bg-accent text-accent-ink inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-opacity hover:opacity-90"
-          >
-            View Projects
-            <FiArrowRight aria-hidden="true" size={16} />
-          </a>
-          <a
-            href="#contact"
-            className="border-border text-ink hover:border-accent inline-flex items-center gap-2 rounded-full border px-5 py-2.5 text-sm font-semibold transition-colors"
-          >
-            Get in Touch
-          </a>
-        </div>
+            <div className="mt-10 flex items-center gap-5">
+              {github && (
+                <a
+                  href={github.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={github.label}
+                  className="text-ink-muted hover:text-accent transition-colors"
+                >
+                  <FiGithub aria-hidden="true" size={20} />
+                </a>
+              )}
+              {linkedin && (
+                <a
+                  href={linkedin.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={linkedin.label}
+                  className="text-ink-muted hover:text-accent transition-colors"
+                >
+                  <FiLinkedin aria-hidden="true" size={20} />
+                </a>
+              )}
+            </div>
+          </div>
 
-        <div className="mt-10 flex items-center gap-5">
-          {github && (
-            <a
-              href={github.href}
-              target="_blank"
-              rel="noreferrer"
-              aria-label={github.label}
-              className="text-ink-muted hover:text-accent transition-colors"
-            >
-              <FiGithub aria-hidden="true" size={20} />
-            </a>
-          )}
-          {linkedin && (
-            <a
-              href={linkedin.href}
-              target="_blank"
-              rel="noreferrer"
-              aria-label={linkedin.label}
-              className="text-ink-muted hover:text-accent transition-colors"
-            >
-              <FiLinkedin aria-hidden="true" size={20} />
-            </a>
-          )}
+          <div className="shrink-0">
+            <img
+              src={site.portrait.src}
+              alt={site.portrait.alt}
+              width={320}
+              height={320}
+              className="border-border h-48 w-48 rounded-full border object-cover sm:h-64 sm:w-64 lg:h-72 lg:w-72"
+            />
+          </div>
         </div>
       </Container>
     </section>
