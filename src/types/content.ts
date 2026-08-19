@@ -12,7 +12,6 @@ export interface SiteContent {
   aboutParagraphs: string[]
   email: string
   social: SocialLink[]
-  resumeHref: string
 }
 
 export interface ExperienceEntry {

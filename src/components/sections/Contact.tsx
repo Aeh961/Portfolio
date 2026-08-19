@@ -1,4 +1,4 @@
-import { FiDownload, FiGithub, FiLinkedin, FiMail } from 'react-icons/fi'
+import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi'
 import { site } from '../../data/site'
 import { Container } from '../common/Container'
 import { SectionHeading } from '../common/SectionHeading'
@@ -42,14 +42,6 @@ export function Contact() {
                   </a>
                 )
               })}
-            <a
-              href={site.resumeHref}
-              download
-              className="border-border text-ink hover:border-accent hover:text-accent inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium transition-colors"
-            >
-              <FiDownload aria-hidden="true" size={16} />
-              Download Resume
-            </a>
           </div>
         </div>
       </Container>

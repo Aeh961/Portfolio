@@ -22,5 +22,4 @@ export const site: SiteContent = {
     },
     { label: 'Email', href: 'mailto:abdallahelhamawi@gmail.com', icon: 'email' },
   ],
-  resumeHref: `${import.meta.env.BASE_URL}resume/Resume.pdf`,
 }

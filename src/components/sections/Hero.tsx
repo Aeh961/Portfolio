@@ -1,4 +1,4 @@
-import { FiArrowRight, FiDownload, FiGithub, FiLinkedin } from 'react-icons/fi'
+import { FiArrowRight, FiGithub, FiLinkedin } from 'react-icons/fi'
 import { site } from '../../data/site'
 import { Container } from '../common/Container'
 
@@ -42,14 +42,6 @@ export function Hero() {
             className="border-border text-ink hover:border-accent inline-flex items-center gap-2 rounded-full border px-5 py-2.5 text-sm font-semibold transition-colors"
           >
             Get in Touch
-          </a>
-          <a
-            href={site.resumeHref}
-            download
-            className="text-ink-muted hover:text-ink inline-flex items-center gap-2 text-sm font-semibold transition-colors"
-          >
-            <FiDownload aria-hidden="true" size={16} />
-            Resume
           </a>
         </div>
 
